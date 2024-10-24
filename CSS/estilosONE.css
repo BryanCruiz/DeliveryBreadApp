@@ -1,0 +1,67 @@
+/* Estilos para el primer nav */
+.top-nav {
+    background-color: #000000; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+}
+
+.top-nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    margin: 0; /* Quita el margen */
+    padding: 0; /* Quita el espacio interno */
+}
+
+.top-nav ul li {
+    display: inline; /* Hace que los elementos de la lista se muestren en línea */
+    margin-right: 20px; /* Espacio entre elementos */
+}
+
+.top-nav ul li a {
+    color: #fff; /* Color del enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+
+}
+
+/* Estilos para el segundo nav */
+.main-nav {
+    background-color: #f4f4f4; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+}
+
+.main-nav .logo a {
+    color: #333; /* Color del texto del logo */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: bold; /* Hace que el texto del logo sea negrita */
+
+    font-size: 30px;
+}
+
+.main-nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    margin: 0; /* Quita el margen */
+    padding: 0; /* Quita el espacio interno */
+}
+
+.main-nav ul li {
+    display: inline; /* Hace que los elementos de la lista se muestren en línea */
+    margin-right: 20px; /* Espacio entre elementos */
+
+}
+
+.main-nav ul li a {
+    margin-top: 33%;
+    color: #333; /* Color del enlace */
+    font-size: 30px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+

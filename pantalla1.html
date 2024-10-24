@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería - Tienda Online</title>
+    <link rel="stylesheet" href="CSS/estilos1.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="user-info">
+            <img src="ruta_de_la_imagen_perfil" alt="Perfil" class="profile-pic">
+            <div class="user-text">
+                <p>Mi perfil</p>
+                <p>usuario@ejemplo.com</p>
+            </div>
+        </div>
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Notificaciones</a>
+            <a href="#">Ubicación</a>
+            <a href="#">Configuración</a>
+        </nav>
+        <div class="search-cart">
+            <input type="text" placeholder="Buscar un producto en específico">
+            <button class="cart-btn">🛒</button>
+        </div>
+    </header>
+<center>
+    <h2>Categorías</h2>
+  
+        <a href="servicios.html"><button style=" margin-right: 10px;" type="button" class="btn btn-outline-success">TODO</button></a>
+        <a href="contacto.html"><button  style=" margin-right: 10px;" type="button" class="btn btn-outline-success">PANADERÍA</button></a>
+        <a href="servicios.html"><button style=" margin-right: 10px;" type="button" class="btn btn-outline-success">REPOSTERÍA</button></a>
+        <a href="index.html"><button style=" margin-right: 10px;" type="button" class="btn btn-outline-success">DE TEMPORADA</button></a>
+        <a href="servicios.html"><button style=" margin-right: 10px;" type="button" class="btn btn-outline-success">TODO</button></a>
+
+</center>
+    <main>
+          
+            
+   
+
+        <section class="offers">
+            <h2>Ofertas Principales</h2>
+            <div class="offer-carousel">
+            
+                <div class="offer-items">
+                    <div class="offer-card">
+                        <img src="imagenes/LogoBREADdelivery.png" alt="Producto 1">
+                        <p>$120</p>
+                        <p>Pan dulce</p>
+                    </div>
+                    <div class="offer-card">
+                        <img src="imagenes/LogoBREADdelivery.png" alt="Producto 2">
+                        <p>$120</p>
+                        <p>Pan de maíz</p>
+                    </div>
+                    <div class="offer-card">
+                        <img src="imagenes/LogoBREADdelivery.png" alt="Producto 3">
+                        <p>$220</p>
+                        <p>Cheesecake</p>
+                    </div>
+                    <div class="offer-card">
+                        <img src="imagenes/LogoBREADdelivery.png" alt="Producto 3">
+                        <p>$220</p>
+                        <p>Pan de Muerto</p>
+                    </div>
+                    <div class="offer-card">
+                        <img src="imagenes/LogoBREADdelivery.png" alt="Producto 3">
+                        <p>$220</p>
+                        <p>Pan de ojaldre</p>
+                    </div>
+                    <div class="offer-card">
+                        <img src="imagenes/LogoBREADdelivery.png" alt="Producto 3">
+                        <p>$220</p>
+                        <p>Pan Blanco</p>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="recent-products">
+            <h2>Productos Recientes</h2>
+            <img src="ruta_de_la_imagen_reciente" alt="Productos recientes">
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+    // Seleccionar los elementos del carrusel
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const offerItems = document.querySelector('.offer-items');
+
+    // Obtener todas las tarjetas de oferta
+    const cards = document.querySelectorAll('.offer-card');
+
+    // Índice para rastrear la posición actual del carrusel
+    let currentIndex = 0;
+    const visibleCards = 3; // Número de tarjetas visibles
+
+    // Función para mostrar las tarjetas en función del índice actual
+    function updateCarousel() {
+        const cardWidth = cards[0].offsetWidth; // Ancho de cada tarjeta
+        const gap = 15; // Margen entre las tarjetas (ajústalo según tu CSS)
+        const totalOffset = -(currentIndex * (cardWidth + gap)); // Desplazamiento total
+
+        // Aplicar el desplazamiento al contenedor de las ofertas
+        offerItems.style.transform = `translateX(${totalOffset}px)`;
+    }
+
+    // Función para mover hacia atrás (prev)
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = cards.length - visibleCards; // Ciclo hacia la última posición
+        }
+        updateCarousel();
+    });
+
+    // Función para mover hacia adelante (next)
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < cards.length - visibleCards) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Ciclo de vuelta a la primera posición
+        }
+        updateCarousel();
+    });
+
+    // Actualizar carrusel en la carga inicial
+    updateCarousel();
+</script>
+
